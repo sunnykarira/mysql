@@ -37,6 +37,9 @@ FLUSH PRIVILEGES;
 Check privileges
 SHOW GRANTS FOR 'username'@localhost;
 
+Remove Grants
+REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'someuser'@'localhost';
+
 
 CREATE DATABASE
 CREATE DATABASE acme;
@@ -72,3 +75,20 @@ DROP DATABASE yourdatabase;
 
 SHOW users
 SELECT * FROM users;
+
+For the table which does not exist the error code is shown.
+11:51:36	SELECT * FROM yourtable LIMIT 0, 1000	Error Code: 1146. Table 'acme.yourtable' doesn't exist	0.00052 sec
+
+
+Inserting into table
+INSERT INTO users(first_name, last_name, email, password, location, dept, is_admin, register_date)
+values('John', 'Doe', 'john.doe@gmail.com', '123456', 'Delhi', 'Development', 1, now());
+
+SELECT statement
+
+SELECT first_name, last_name FROM users;
+
+SELECT * FROM users WHERE location='Delhi' AND dept='sales';
+
+SELECT * FROM users WHERE is_admin > 0;
+
