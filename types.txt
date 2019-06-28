@@ -43,3 +43,32 @@ CREATE DATABASE acme;
 
 USE DATABASE
 USE acme;
+
+
+MAX for VARCHAR is 255. 
+
+SHOW TABLES; for tables.
+
+CREATE TABLE
+
+CREATE TABLE users(
+    -> id INT AUTO_INCREMENT,
+    -> first_name VARCHAR(100),
+    -> last_name VARCHAR(100),
+    -> email VARCHAR(75),
+    -> password VARCHAR(255),
+    -> location VARCHAR(100),
+    -> dept VARCHAR(75),
+    -> is_admin TINYINT(1),
+    -> register_date DATETIME,
+    -> PRIMARY KEY(id)
+    -> );
+
+
+DROP TABLE AND DATABASE
+
+DROP TABLE yourtable;
+DROP DATABASE yourdatabase;
+
+SHOW users
+SELECT * FROM users;
