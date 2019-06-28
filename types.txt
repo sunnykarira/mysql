@@ -28,3 +28,11 @@ CREATE USER 'yourname'@localhost IDENTIFIED BY 'password';
 
 Check for mysql users
 SELECT user, host FROM mysql.user;
+
+To grant all proviledges to a user (check doc for other ones)
+GRANT ALL PRIVILEGES ON * . * TO 'username'@localhost;
+
+FLUSH PRIVILEGES;
+
+Check privileges
+SHOW GRANTS FOR 'username'@localhost;
