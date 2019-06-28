@@ -1,0 +1,30 @@
+
+https://www.youtube.com/watch?v=9ylj9NR0Lcg
+
+
+COMMON DATA TYPES
+
+Numeric INT, TINYINT, BIGINT, FLOAT
+String VARCHAR, TEXT (65000 chars limit and therefore we have long text), CHAR
+Dates DATE, DATETIME, TIMESTAMP
+Other BINARY, JSON
+
+There is no boolean in mysql, there we use 0/1 and that is TINYINT.
+
+
+Relational DB => You can relate data to each other.
+
+Primary Key -> Unique identifier in table.
+Orders table (id) is foreign key and is primary key(id) in users table.
+
+
+Orders Table (id, user_id, status, created_at)
+Users Table (id, full_name, email, gender, date_of_birth, country_code, created_at)
+
+
+
+Create a new user to access the DB.
+CREATE USER 'yourname'@localhost IDENTIFIED BY 'password';
+
+Check for mysql users
+SELECT user, host FROM mysql.user;
