@@ -36,3 +36,10 @@ FLUSH PRIVILEGES;
 
 Check privileges
 SHOW GRANTS FOR 'username'@localhost;
+
+
+CREATE DATABASE
+CREATE DATABASE acme;
+
+USE DATABASE
+USE acme;
